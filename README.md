@@ -17,7 +17,7 @@ An intelligent book recommendation system that understands your queries using Hu
 
 ## Demo
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+👉 [Check it out on Hugging Face] (https://huggingface.co/spaces/Arnav2211/Book-Recommender)
 
 ---
 
