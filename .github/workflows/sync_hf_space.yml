@@ -1,0 +1,24 @@
+name: Sync to Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "arnavmaha2211@gmail.com"
+          git config --global user.name "Arnavv2211"
+          git remote add space https://Arnav2211:$HF_TOKEN@huggingface.co/spaces/Arnav2211/Book-Recommender
+          git push --force space main
